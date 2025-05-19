@@ -772,7 +772,7 @@ class Parser {
                 this.loadContext();
                 const expr = this.expr();
                 const termExt = this.termExt();
-                const node = new Node("TermExt", [...expr.code, ...termExt.code]);
+                const node = new Node("TermExt", [...expr.code, ...termExt.code, code]);
 
                 return node;
             }

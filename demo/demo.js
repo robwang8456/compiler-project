@@ -39,49 +39,49 @@ const DEFAULT_ARG = `
 
     // -----------------------------------------------
     // Quick Sort
-    def quickSort(arr, low, high) {
-        if (low < high) {
-            pivot = partition(arr, low, high);
-            quickSort(arr, low, pivot - 1);
-            quickSort(arr, pivot + 1, high);
-        }
-        return;
-    }
+    // def quickSort(arr, low, high) {
+    //     if (low < high) {
+    //         pivot = partition(arr, low, high);
+    //         quickSort(arr, low, pivot - 1);
+    //         quickSort(arr, pivot + 1, high);
+    //     }
+    //     return;
+    // }
 
-    def partition(arr, low, high) {
-        pivot = arr[high];
-        i = low - 1;
+    // def partition(arr, low, high) {
+    //     pivot = arr[high];
+    //     i = low - 1;
 
-        for (j = low; j < high; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
+    //     for (j = low; j < high; j++) {
+    //         if (arr[j] < pivot) {
+    //             i++;
+    //             temp = arr[i];
+    //             arr[i] = arr[j];
+    //             arr[j] = temp;
+    //         }
+    //     }
 
-        temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
+    //     temp = arr[i + 1];
+    //     arr[i + 1] = arr[high];
+    //     arr[high] = temp;
 
-        return i + 1;
-    }
+    //     return i + 1;
+    // }
 
-    // Init array of 10 random numbers between 0 and 100
-    dim arr[10];
-    for (i = 0; i < 10; i++) {
-        arr[i] = int(rand() * 100);
-        print(arr[i]);
-    }
-    print();
+    // // Init array of 10 random numbers between 0 and 100
+    // dim arr[10];
+    // for (i = 0; i < 10; i++) {
+    //     arr[i] = int(rand() * 100);
+    //     print(arr[i]);
+    // }
+    // print();
 
-    quickSort(arr, 0, 9);
+    // quickSort(arr, 0, 9);
 
-    // Print sorted array
-    for (i = 0; i < 10; i++) {
-        print(arr[i]);
-    }
+    // // Print sorted array
+    // for (i = 0; i < 10; i++) {
+    //     print(arr[i]);
+    // }
     // -----------------------------------------------
 
     // -----------------------------------------------
@@ -98,6 +98,8 @@ const DEFAULT_ARG = `
     //     print(fib(i));
     // }
     // -----------------------------------------------
+
+    // print(10 + 5 * 2);
 `;
 
 function getArg() {
@@ -109,7 +111,7 @@ console.log(inputs);
 
 const lex = new Lex(inputs);
 const tokenList = lex.scan();
-let i = 0;
+// let i = 0;
 // tokenList.map((token) => console.log(i++, token));
 
 const parser = new Parser(tokenList);
